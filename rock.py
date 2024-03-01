@@ -30,7 +30,11 @@ def result(human_choice,computer_choice):
     else:
         print("Computer wins")
         comp_score = comp_score + 1
-
+    text_area = Text(master = rps, font = ("arial",15,"italic bold"), relief = RIDGE, bg = "#033642", fg = "white", width = 26)
+    text_area.grid(column = 0, row = 4)
+    answer = "Your Choice:  {uc} \nComputer's Choice : {cc} \n Your Score: {u} \n Computer Score: {c}".format(uc = user_choice,
+                                cc = comp_choice, u = user_score, c = comp_score)
+    text_area.insert(END,answer)
 
 
 def rock():
