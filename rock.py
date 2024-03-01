@@ -16,6 +16,21 @@ def number_to_choice(number):
 
 def random_computer_choice():
     return random.choice(['rock', 'paper', 'scissor'])
+# final result
+def result(human_choice,computer_choice):
+    global user_score
+    global comp_score
+    user = choice_to_number(human_choice)
+    comp = choice_to_number(computer_choice)
+    if(user == comp):     #    condition for tie
+        print("Tie")
+    elif((user-comp)%3 == 1):
+        print("You Win")
+        user_score += 1
+    else:
+        print("Computer wins")
+        comp_score = comp_score + 1
+
 
 
 def rock():
